@@ -44,6 +44,7 @@ const People = ({ setErrorApi }) => {
 
   return (
     <>
+      <h1 className="header-text">People</h1>
       {
         people &&
         <PeopleList
