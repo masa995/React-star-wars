@@ -1,0 +1,32 @@
+@import url("./normalize.css");
+
+:root {
+  --color-dark-gray: #10100e;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-yellow: #ffff00;
+
+  --spacing-medium: 20px;
+  --spacing-medium-minus: -20px;
+
+  --font-family-main: sans-serif;
+  --font-size-root: 20px;
+  --font-size-header: 26px;
+
+  --border-radius-small: 5px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+font-family: var(--font-family-main);
+background-color: var(--color-dark-gray);
+}

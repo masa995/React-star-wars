@@ -1,0 +1,1 @@
+export { default as PeoplePage } from "./People/People";
