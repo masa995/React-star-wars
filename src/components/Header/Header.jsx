@@ -13,7 +13,7 @@ const Header = () => {
           </li>
 
           <li className={style.header__item}>
-            <NavLink to={"/people"}>People</NavLink>
+            <NavLink to={"/people/?page=1"}>People</NavLink>
           </li>
         </ul>
       </div>

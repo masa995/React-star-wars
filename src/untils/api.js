@@ -1,8 +1,9 @@
-// export const getAPIresponse = (url) => {
-//   fetch(url).then((res) => res.json())
-//     .then((body) => console.log(body))
-//     .catch((e) => console.log(e.massage));
-// }
+import { HTTP, HTTPS } from "../constants/api";
+
+export const changeHTTP = (url) => {
+  const result = url ? url.replace(HTTP, HTTPS) : url;
+  return result;
+}
 
 export const getAPIresponse = async (url) => {
   try {
@@ -20,4 +21,10 @@ export const getAPIresponse = async (url) => {
     return false;
   }
 }
+
+// export const getAPIresponse = (url) => {
+//   fetch(url).then((res) => res.json())
+//     .then((body) => console.log(body))
+//     .catch((e) => console.log(e.massage));
+// }
 
