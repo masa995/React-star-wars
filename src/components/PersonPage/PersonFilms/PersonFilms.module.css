@@ -1,0 +1,30 @@
+.films {
+  margin-left: var(--spacing-large);
+  padding: var(--spacing-medium) 0;
+}
+.films__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.films__item {
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+}
+.films__item:not(:last-child){
+  margin-bottom: var(--margin-list);
+}
+.films__episode {
+  padding: var(--spacing-ultrasmall);
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-red);
+}
+.films__colon {
+  width: 20px;
+  font-weight: var(--font-bold);
+  text-align: center;
+}
+.films__title {
+  text-shadow: var(--text-shadow-blue);
+}

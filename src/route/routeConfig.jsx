@@ -2,7 +2,7 @@ import React from "react";
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 
-import { HomePage, PeoplePage, NotFound } from "../pages/index"
+import { HomePage, PeoplePage, PersonPage, NotFound } from "../pages/index"
 
 export const router = createBrowserRouter([
   {
@@ -18,7 +18,11 @@ export const router = createBrowserRouter([
       {
         path: "/people",
         element: <PeoplePage />
-
+      },
+      {
+        //:id - динамично изменяющейся параметр
+        path: "/people/:id",
+        element: <PersonPage />
       }
     ]
   }

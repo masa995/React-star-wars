@@ -12,6 +12,7 @@
   --color-violet:      #ae72c2;
   --color-red:         #f75d83;
 
+  --margin-list: 7px;
 
   --spacing-ultrasmall: 5px;
   --spacing-small:      10px;
@@ -22,6 +23,7 @@
   --font-family-main: sans-serif;
   --font-size-root: 20px;
   --font-size-header: 26px;
+  --font-size-subheader: 18px;
 
   --border-radius-small: 5px;
 

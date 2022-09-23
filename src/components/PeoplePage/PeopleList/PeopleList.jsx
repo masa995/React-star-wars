@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 import style from "./PeopleList.module.css";
@@ -11,7 +12,8 @@ const PeopleList = ({ people }) => {
           <li
             className={style.list__item}
             key={`${id}_${name}`}>
-            <a href="http://localhost:3000/">
+            <Link
+              to={`/people/${id}`}>
               <div>
                 <img
                   className={style.list__img_person}
@@ -22,11 +24,11 @@ const PeopleList = ({ people }) => {
                   {name}
                 </p>
               </div>
-            </a>
+            </Link>
           </li>
         )
       }
-    </ul>
+    </ul >
   )
 }
 

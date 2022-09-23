@@ -7,6 +7,7 @@ export const SWAPI_PEOPLE = "people/";
 export const SWAPI_PARAM_PAGE = "?page="
 
 export const SWAPI_API_PEOPLE = HTTPS + SWAPI_ROOT + SWAPI_PEOPLE + SWAPI_PARAM_PAGE;
+export const SWAPI_API_PERSON = HTTPS + SWAPI_ROOT + SWAPI_PEOPLE;
 
 
 // visualguide

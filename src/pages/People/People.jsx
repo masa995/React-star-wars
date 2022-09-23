@@ -42,6 +42,7 @@ const People = ({ setErrorApi }) => {
       setPeople(listPeople);
       setPrevPage(changeHTTP(response.previous));
       setNextPage(changeHTTP(response.next));
+
       setErrorApi(false); //сервер хорошо отработал
     } else {
       setErrorApi(true); //сервер отработал с ошибкой
