@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { withErrorApi } from "../../HOChelper/withErrorApi"
 import { useQueryParams } from "../../hooks/useQueryParams";
 
-import { PeopleList, PeopleNavigate } from "../../components/index.js";
+import { PeopleList, PeopleNavigate, Loader } from "../../components/index.js";
 
 import { SWAPI_API_PEOPLE, SWAPI_PEOPLE } from "../../constants/api.js";
 import { getAPIresponse, changeHTTP } from "../../untils/api.js"
@@ -63,10 +63,13 @@ const People = ({ setErrorApi }) => {
       />
 
       {
-        people &&
-        <PeopleList
-          people={people}
-        />
+        people ?
+          (<PeopleList
+            people={people}
+          />
+          ) : (
+            <Loader />
+          )
       }
     </>
 

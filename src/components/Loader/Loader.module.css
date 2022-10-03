@@ -1,0 +1,54 @@
+.container {
+	width: 100%;
+	height: 50vh;
+	display: flex;
+  padding: 20px;
+	justify-content: center;
+	align-items: center;
+}
+
+.wheel {
+	width: 80px;
+	height: 80px;
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+  border-radius: 50%;
+  animation: cssload-animation1 1.30s infinite linear;
+}
+
+.wheel:before,
+.wheel:after {
+  content: "";
+	width: 80%; 
+	height: 80%;
+	position: absolute;
+	top: 0;
+	left: 0;
+  border-radius: 50%;
+  box-shadow: var(--spinner-shadow-yellow);
+  background-color: rgb(255, 255, 255);
+}
+
+.wheel:before {
+		left: -5%;
+		animation: cssload-animation2 1.30s infinite alternate ease-in-out;
+		transform-origin: 10% 50%;
+}
+.wheel:after {
+		left: auto;
+		right: -5%;
+		animation: cssload-animation2 1.30s 1.30s infinite alternate ease-in-out;
+		transform: scale(0);
+		transform-origin: 90% 50%;
+}
+
+@keyframes cssload-animation1 {
+	0%	 { transform: rotate(20deg); }
+	100% { transform: rotate(380deg); }
+}
+
+@keyframes cssload-animation2 {
+	0%	 { transform: scale(0); }
+	100% { transform: scale(1); }
+}

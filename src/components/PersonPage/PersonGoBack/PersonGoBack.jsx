@@ -11,6 +11,7 @@ const PersonGoBack = () => {
   }
 
   const navigate = useNavigate();
+
   return (
     <Link
       className={style.link}

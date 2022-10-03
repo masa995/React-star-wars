@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { useParams } from "react-router";
 
 import { withErrorApi } from "../../HOChelper/withErrorApi";
-import { PersonInfo, PersonPhoto, PersonGoBack, PersonFilms } from "../../components";
+import { PersonInfo, PersonPhoto, PersonGoBack, PersonFilms, Loader } from "../../components/index.js";
 
 import { SWAPI_API_PERSON } from "../../constants/api";
 import { getAPIresponse } from "../../untils/api";
@@ -12,8 +12,11 @@ import { getPeopleImage } from "../../untils/PeopleData";
 import style from "./Person.module.css";
 
 const Person = ({ setErrorApi }) => {
+
   // useParams возвращает объект пар ключ / значение динамических параметров из текущего URL.
+
   const { id } = useParams();
+
   const [personInfo, setPersonInfo] = React.useState(null);
   const [personName, setPersonName] = React.useState(null);
   const [personPhoto, setPersonPhoto] = React.useState(null);
@@ -56,26 +59,33 @@ const Person = ({ setErrorApi }) => {
         setErrorApi(true);
       }
     })();
-  }, [id, setErrorApi]);
+  }, [setErrorApi, id]);
 
   return (
-    <div className={style.wrapper}>
+    <div className={style.wrapper} >
       <PersonGoBack />
+
       <div className={style.person__container}>
-        <h1 className={style.person__name}>{personName}</h1>
+        {personPhoto ? (
+          <>
+            <h1 className={style.person__name}>{personName}</h1>
 
-        <div className={style.person__box}>
-          <PersonPhoto
-            personPhoto={personPhoto}
-            personName={personName}
-          />
+            <div className={style.person__box}>
+              <PersonPhoto
+                personPhoto={personPhoto}
+                personName={personName}
+              />
 
-          {personInfo && <PersonInfo personInfo={personInfo} />}
-
-          {personFilms && <PersonFilms personFilms={personFilms} />}
-        </div>
+              {personInfo && <PersonInfo personInfo={personInfo} />}
+              {personFilms && <PersonFilms personFilms={personFilms} />}
+            </div>
+          </>
+        ) : (
+          <Loader />
+        )
+        }
       </div>
-    </div>
+    </div >
   )
 }
 
