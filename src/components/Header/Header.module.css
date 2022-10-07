@@ -1,8 +1,12 @@
 .header__container {
-  display: flex;
-  align-items: center;
   margin: var(--spacing-large) 0;
 }
+
+.header__inner{
+  display: flex;
+  align-items: center;
+}
+
 .logo {
   width: 60px;
   height: 60px;

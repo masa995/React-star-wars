@@ -28,3 +28,7 @@
   border-left: 5px solid var(--color-name);
   border-bottom-left-radius: var(--border-radius-small);
 }
+
+.person__box_img{
+  position: relative;
+}

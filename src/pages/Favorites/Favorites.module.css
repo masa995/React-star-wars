@@ -1,0 +1,5 @@
+.text{
+  font-size: var(--font-size-root);
+  font-weight: normal;
+  color: var(--color-white);
+}

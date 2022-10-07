@@ -52,4 +52,4 @@ PersonFilms.propTypes = {
   personFilms: PropTypes.array
 }
 
-export default PersonFilms
+export default React.memo(PersonFilms)

@@ -6,7 +6,7 @@ import style from "./PersonInfo.module.css"
 const PersonInfo = ({ personInfo }) => {
   return (
     <div className={style.wrapper}>
-      {<ul className={style.person_info__list}>
+      <ul className={style.person_info__list}>
         {personInfo.map(({ title, data }) => (
           data && (
             <li
@@ -18,7 +18,6 @@ const PersonInfo = ({ personInfo }) => {
           )
         ))}
       </ul>
-      }
     </div>
   )
 }
@@ -27,4 +26,4 @@ PersonInfo.propTypes = {
   personInfo: PropTypes.array
 }
 
-export default PersonInfo
+export default React.memo(PersonInfo)

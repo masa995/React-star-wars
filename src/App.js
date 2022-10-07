@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import { HomePage, PeoplePage, PersonPage, NotFound } from "./pages/index"
+import { HomePage, PeoplePage, PersonPage, FavoritesPage, NotFound } from "./pages/index"
 import Layout from "./Layout/Layout";
 
 const App = () => {
@@ -27,6 +27,13 @@ const App = () => {
           path={"/people/:id"}
           element={
             <PersonPage />
+          }
+        />
+
+        <Route
+          path={"/favorites"}
+          element={
+            <FavoritesPage />
           }
         />
 

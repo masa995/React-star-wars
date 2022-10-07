@@ -29,4 +29,4 @@ const PersonGoBack = () => {
   )
 }
 
-export default PersonGoBack
+export default React.memo(PersonGoBack)

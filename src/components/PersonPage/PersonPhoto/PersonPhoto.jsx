@@ -20,4 +20,4 @@ PersonPhoto.propTypes = {
   personName: PropTypes.string
 }
 
-export default PersonPhoto
+export default React.memo(PersonPhoto)

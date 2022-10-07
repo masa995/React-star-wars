@@ -27,8 +27,6 @@
 
   --border-radius-small: 5px;
 
-  --font-size-header: 26px;
-
   --text-shadow-yellow:
   0 0 5px var(--color-white),
   0 0 40px var(--color-yellow);
@@ -74,7 +72,7 @@ html {
 }
 
 body {
-  color: #fff;
+  color: var(--color-white);
   margin: 0;
   padding: 0;
   font-family: var(--font-family-main);
