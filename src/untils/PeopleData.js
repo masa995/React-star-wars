@@ -3,7 +3,9 @@ import {
   GUIDE_URL_IMG_PEOPLE, GUIDE_IMG_EXTENSION
 } from "../constants/api";
 
-
+//-----------------------------------------------
+// Получить ID страницы по URL
+//-----------------------------------------------
 export const getPeoplePageId = (url) => {
   // const result = url.replace(SWAPI_API_PEOPLE, '');
   const pos = url.lastIndexOf(SWAPI_PARAM_PAGE);

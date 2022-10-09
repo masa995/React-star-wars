@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import { HomePage, PeoplePage, PersonPage, FavoritesPage, NotFound } from "./pages/index"
+import { HomePage, PeoplePage, PersonPage, FavoritesPage, SearchPage, NotFound } from "./pages/index"
 import Layout from "./Layout/Layout";
 
 const App = () => {
@@ -34,6 +34,13 @@ const App = () => {
           path={"/favorites"}
           element={
             <FavoritesPage />
+          }
+        />
+
+        <Route
+          path={"/search"}
+          element={
+            <SearchPage />
           }
         />
 

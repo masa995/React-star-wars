@@ -17,6 +17,11 @@ const Header = () => {
           <li className={style.header__item}>
             <NavLink to={"/people/?page=1"}>People</NavLink>
           </li>
+
+
+          <li className={style.header__item}>
+            <NavLink to={"/search"}>Search</NavLink>
+          </li>
         </ul>
         <FavoritesLink />
       </div>

@@ -15,7 +15,6 @@ import style from "./Person.module.css";
 const Person = ({ setErrorApi }) => {
 
   // useParams возвращает объект пар ключ / значение динамических параметров из текущего URL.
-
   const { id } = useParams();
 
   const [personInfo, setPersonInfo] = React.useState(null);
@@ -32,7 +31,6 @@ const Person = ({ setErrorApi }) => {
     const responce = await getAPIresponse(`${SWAPI_API_PERSON}${id}/`);
 
     if (responce) {
-      setErrorApi(false);
       setPersonInfo([
         {
           title: "Gender", data: responce.gender
@@ -58,6 +56,7 @@ const Person = ({ setErrorApi }) => {
       setPersonName(responce.name);
       setPersonPhoto(getPeopleImage(id));
       setPersonFilms(responce.films);
+      setErrorApi(false);
 
     } else {
       setErrorApi(true);

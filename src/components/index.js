@@ -1,7 +1,10 @@
 export { default as ErrorMessage } from "./ErrorMessage/ErrorMessage";
 export { default as Loader } from "./Loader/Loader";
 export { default as Header } from "./Header/Header";
+
 export { default as FavoritesLink } from "./FavoritesLink/FavoritesLink";
+
+export { default as SearchInfo } from "./SearchInfo/SerchInfo";
 
 export { default as PeopleList } from "./PeoplePage/PeopleList/PeopleList";
 export { default as PeopleNavigate } from "./PeoplePage/PeopleNavigate/PeopleNavigate";
