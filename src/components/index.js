@@ -2,6 +2,7 @@ export { default as ErrorMessage } from "./ErrorMessage/ErrorMessage";
 export { default as Loader } from "./Loader/Loader";
 export { default as Header } from "./Header/Header";
 export { default as InputText } from "./InputText/InputText";
+export { default as Video } from "./Video/Video";
 
 export { default as FavoritesLink } from "./FavoritesLink/FavoritesLink";
 

@@ -1,0 +1,11 @@
+.text{
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 30px;
+  line-height: 1.7;
+  font-size: var(--font-size-root);
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 0 2px var(--color-white);
+  color: var(--color-yellow);
+}

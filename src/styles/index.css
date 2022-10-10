@@ -39,6 +39,11 @@
 0 0 5px var(--color-white),
 0 0 20px var(--color-yellow);
 
+--box-shadow:
+0 0 24px rgba(106, 131, 251, 0.15), 
+0 0 30px rgba(106, 131, 251, 0.25), 
+0 0 10px rgba(106, 131, 251, 0.1);
+
 --theme-bgimage: url("../static/img/bg.jpg");
 }
 
