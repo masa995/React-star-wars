@@ -1,26 +1,21 @@
-import React, { useCallback, useEffect } from "react"
+import React from "react"
+import debounce from "lodash.debounce";
 import PropTypes from "prop-types"
 
 import { withErrorApi } from "../../HOChelper/withErrorApi";
-import { SearchInfo } from "../../components";
+import { SearchInfo, InputText, Loader } from "../../components";
 
 import { getAPIresponse } from "../../untils/api";
 import { getId, getPeopleImage } from "../../untils/PeopleData";
 import { SWAPI_PEOPLE, SWAPI_API_SEARCH } from "../../constants/api";
 
-// import style from "./Search.module.css"
-
 const Search = ({ setErrorApi }) => {
   const [valueSearch, setValueSearch] = React.useState('');
   const [peopleSearch, setPeopleSearch] = React.useState([]);
+  const [loader, setLoader] = React.useState(false);
 
-  const handleChangeValue = (e) => {
-    const value = e.target.value;
-    setValueSearch(value);
-    getResponseSearch(value);
-  }
-
-  const getResponseSearch = useCallback(async (param) => {
+  const getResponseSearch = React.useCallback(async (param) => {
+    setLoader(true);
     const responce = await getAPIresponse(SWAPI_API_SEARCH + param);
 
     if (responce) {
@@ -37,26 +32,43 @@ const Search = ({ setErrorApi }) => {
 
       setPeopleSearch(listPeople);
       setErrorApi(false);
+      setLoader(false);
     } else {
       setErrorApi(true);
     }
-  }, [setErrorApi])
+  }, [setErrorApi]);
 
-  useEffect(() => {
+  const debouncedGetResponse = React.useCallback(
+    debounce(value => getResponseSearch(value), 250), []);
+
+  React.useEffect(() => {
     //'' - 10 первых элементов
     getResponseSearch('')
-  }, [getResponseSearch])
+  }, [])
+
+  const handleChangeValue = (value) => {
+    setValueSearch(value);
+    debouncedGetResponse(value);
+  }
 
   return (
     <>
       <h1 className="header-text">Search</h1>
-      <input
-        type="text"
+
+      <InputText
         value={valueSearch}
-        onChange={handleChangeValue}
+        handleChangeValue={handleChangeValue}
         placeholder="Input character name"
       />
-      <SearchInfo people={peopleSearch} />
+
+      {
+        loader ? (
+          <Loader />
+        ) : (
+          <SearchInfo people={peopleSearch} />
+        )
+      }
+
     </>
   )
 }

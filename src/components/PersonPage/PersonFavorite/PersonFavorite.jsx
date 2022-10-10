@@ -33,6 +33,7 @@ const PersonFavorite = ({ id, personPhoto, personName, personFavorite, setPerson
       <button
         className={style.star}
         onClick={handleClick}
+        aria-label="Add favorite"
       >
         <img
           className={style.star__img}

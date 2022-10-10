@@ -3,22 +3,23 @@
   margin: var(--spacing-medium) 0;
   padding: 0;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   list-style-type: none;
 }
 
 .list__item{
-  margin: 5px;
+  margin: var(--spacing-small);
   width: 110px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   border-radius: 0 0 var( --border-radius-small) var( --border-radius-small);
   background-color: var(--color-white);
+  overflow: hidden;
 }
 
 .list__link{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   color: var(--color-black);
   text-decoration: none;
   text-align: center;
@@ -26,15 +27,17 @@
 
 .list__img{
   width: 110px;
-  height: auto;
+  min-height: 151px;
   object-fit: cover;
   object-position: center center;
 }
 
 .list__name{
-  align-self: flex-start;
-  margin: 0;
-  padding: 5px;
+  min-height: 47px;
+  flex-grow: 1;
+  margin-bottom: auto;
+  margin-top: 0;
+  padding: var(--spacing-ultrasmall);
 }
 
 .list__no_data{

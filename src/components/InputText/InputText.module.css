@@ -1,0 +1,46 @@
+.input{
+  --border: 3px;
+  --btn-width: 30px;
+}
+
+.input{
+position: relative;
+display: inline-flex;
+margin-bottom: 15px;
+}
+
+.input__field{
+  min-width: 300px;
+  padding: 10px 15px;
+  padding-right: calc(var(--btn-width) + 15px);
+  border-radius: var(--border-radius-small);
+  border: var(--border) solid;
+  border-color: var(--color-dark-gray);
+  font-size: var(--font-size-subheader);
+  font-family: var(--font-family-main);
+  outline: none;
+}
+
+.input__field:focus,
+.input__field:hover{
+  border-color: var(--color-blue);
+}
+
+.input__btn{
+  position: absolute;
+  top: var(--border);
+  right: var(--border);
+  width: var(--btn-width);
+  height: calc(100% - var(--border) * 2);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.input__img{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center center;
+  opacity: 0.5;
+}
