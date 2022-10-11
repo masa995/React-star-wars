@@ -10,6 +10,7 @@ const PersonGoBack = () => {
     navigate(-1);
   }
 
+  //seNavigate() - обеспечивает прямой доступ к истории React Router, что позволяет нам выполнять действия над ней.
   const navigate = useNavigate();
 
   return (

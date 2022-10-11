@@ -10,8 +10,6 @@ import { SWAPI_API_PEOPLE, SWAPI_PEOPLE } from "../../constants/api.js";
 import { getAPIresponse, changeHTTP } from "../../untils/api.js"
 import { getId, getPeopleImage, getPeoplePageId } from "../../untils/PeopleData.js";
 
-//import style from "./People.module.css"
-
 const People = ({ setErrorApi }) => {
 
   const [people, setPeople] = React.useState(null); //данные о персонажах
@@ -20,6 +18,7 @@ const People = ({ setErrorApi }) => {
   const [counterPage, setCounterPage] = React.useState(1); //номер текущей страницы
 
   const query = useQueryParams();
+  //Возвращаем query parameters по определенному ключу (page)
   const queryPage = query.get("page");
 
   //async / await  тоже возвращает Promise и с ним работает 
