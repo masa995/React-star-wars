@@ -1,5 +1,5 @@
 .wrapper  {
-  margin-top: 45px;
+  margin-top: var(--spacing-large);
 }
 
 .person__container{
@@ -31,4 +31,29 @@
 
 .person__box_img{
   position: relative;
+}
+
+@media(max-width: 771px){
+  .wrapper  {
+    margin-top: var(--spacing-medium);
+  }
+
+  .person__container{
+    margin: 0 auto;
+    width: 365px;
+  }
+
+  .person__box{
+    flex-direction: column;
+  }
+
+  .person__box_img{
+    align-self: center;
+  }
+}
+
+@media(max-width: 411px){
+.person__container{
+  width: 100%;
+ }
 }

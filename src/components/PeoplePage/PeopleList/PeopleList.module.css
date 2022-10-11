@@ -30,3 +30,13 @@
   object-fit: cover;
   object-position: top center;
 }
+
+@media(max-width: 411px){
+  .list__item {
+    width: 180px;
+  }
+  
+  .list__img_person {
+    height: 248px;
+  }
+}

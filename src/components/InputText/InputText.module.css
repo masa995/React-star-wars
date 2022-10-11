@@ -10,7 +10,7 @@ margin-bottom: 15px;
 }
 
 .input__field{
-  min-width: 300px;
+  width: 350px;
   padding: 10px 15px;
   padding-right: calc(var(--btn-width) + 15px);
   border-radius: var(--border-radius-small);
@@ -43,4 +43,10 @@ margin-bottom: 15px;
   object-fit: contain;
   object-position: center center;
   opacity: 0.5;
+}
+
+@media(max-width: 411px){
+    .input__field{
+      width: 100%;
+  }
 }

@@ -1,6 +1,6 @@
 .container{
   width: 250px;
-  height: 350px;
+  height: 350px;;
 }
 
 .photo{
@@ -9,4 +9,11 @@
   object-fit: cover;
   object-position: center center;
   border-radius: var(--border-radius-small);
+}
+
+@media(max-width: 771px){
+  .container{
+    width: 200px;
+    height: 275px;
+  }
 }

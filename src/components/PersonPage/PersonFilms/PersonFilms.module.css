@@ -28,3 +28,37 @@
 .films__title {
   text-shadow: var(--text-shadow-blue);
 }
+
+@media(max-width: 986px){
+  .films {
+    padding: 0;
+    margin-left: 0;
+    margin-top: var(--spacing-medium);
+  }
+}
+
+@media(max-width: 771px){
+  .films {
+  margin: 0; 
+  }
+}
+
+@media(max-width: 411px){
+  .films__item{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .films__item:not(:last-child){
+    margin-bottom: var(--spacing-ultramedium);
+  }
+
+  .films__colon {
+    display: none;
+  }
+
+  .films__episode {
+    padding: 3px;
+    margin-bottom: 2px;
+  }
+}

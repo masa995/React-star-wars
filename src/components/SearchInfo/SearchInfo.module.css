@@ -38,6 +38,7 @@
   margin-bottom: auto;
   margin-top: 0;
   padding: var(--spacing-ultrasmall);
+  font-size: var(--font-size-root-M);
 }
 
 .list__no_data{

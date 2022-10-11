@@ -6,3 +6,9 @@
   border-radius: var(--border-radius-small);
   box-shadow: var(--box-shadow);
 }
+
+@media(max-width: 631px){
+  .video{
+    width: 100%;
+  }
+}

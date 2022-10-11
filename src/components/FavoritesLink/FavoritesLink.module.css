@@ -30,3 +30,22 @@
   border-radius: 50%;
   background-color: var(--color-white);
 }
+
+@media(max-width: 771px){
+  .link{
+    width: 45px;
+    height: 45px;
+  }
+
+  .link__counter{
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+  }
+}
+
+@media(max-width: 631px){
+  .link{
+    margin-left: 0;
+  }
+}

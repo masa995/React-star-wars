@@ -43,3 +43,14 @@
   border: 1px solid rgba(255, 255, 255, 0.5);
   text-shadow: none;
 }
+
+@media(max-width: 771px){
+  .navigate__link{
+    font-size: var(--font-size-root-M);
+  }
+
+  .navigate__link_elem{
+    max-width: 100px;
+    padding :var( --spacing-small) var(--spacing-ultramedium);
+  }
+}

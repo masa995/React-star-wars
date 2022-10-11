@@ -2,7 +2,7 @@
   width: 300px;
   padding: var(--spacing-medium);
   margin-left: var(--spacing-large);
-  background-color: rgba(0, 0, 0, .60);
+  background-color: rgba(106, 131, 251, .3);
   border-radius: var(--border-radius-small);
   color: var(--color-white);
 }
@@ -21,3 +21,16 @@
   text-decoration: underline;
   text-shadow: var(--text-shadow-blue);
 }
+
+@media(max-width: 771px){
+  .wrapper{
+    width: 100%;
+    margin: var(--spacing-medium) 0;
+  }
+}
+
+@media(max-width: 411px){
+  .wrapper{
+    margin: var(--spacing-medium) 0;
+  }
+  }

@@ -16,15 +16,18 @@
 
   --spacing-ultrasmall: 5px;
   --spacing-small:      10px;
+  --spacing-ultramedium: 15px;
   --spacing-medium: 20px;
   --spacing-medium-minus: -20px;
   --spacing-large:      30px;
 
   --font-family-main: sans-serif;
-  --font-size-root: 20px;
   --font-size-header: 30px;
+  --font-size-header-M: 27px;
+  --font-size-root: 20px;
+  --font-size-root-M: 16px;
   --font-size-subheader: 18px;
-
+  
   --border-radius-small: 5px;
 
   --text-shadow-yellow:
@@ -62,6 +65,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--font-family-main);
+  font-size: var(--font-size-root);
   background-color: var(--color-dark-gray);
   background-color: var(--color-dark-gray);
   background-image: var(--theme-bgimage);
@@ -85,15 +89,17 @@ img{
 .container {
   margin: 0 auto;
   padding: 0 15px;
-  width: var(--max-width-container);
+  max-width: var(--max-width-container);
 }
 
 .main {
   flex: 1 1 auto; /*для того чтобы футер прижать к низу*/
+  margin-bottom: var(--spacing-medium);
 }
 
 .header-text {
   line-height: 1.7;
+  margin: var(--spacing-medium) 0;
   font-size: var(--font-size-header);
   text-shadow: 0 0 2px var(--color-black);
   color: var(--color-yellow);
@@ -101,6 +107,59 @@ img{
 }
 
 .footer__copyright{
+  margin: 0;
+  padding: var(--spacing-medium) 0;
   color: var(--color-white);
   font-size: var(--font-size-root);
+}
+
+@media(max-width: 1200px){
+  .container{
+    max-width: 1170px;
+  }
+}
+
+@media(max-width: 1171px){
+  body{
+    font-size: var(--font-size-root-M);
+  }
+
+  .container{
+    max-width: 985px;
+  }
+}
+
+@media(max-width: 986px){
+  .container{
+    max-width: 770px;
+  }
+}
+
+@media(max-width: 771px){
+  .container{
+    max-width: 630px;
+  }
+}
+
+@media(max-width: 631px){
+  .container{
+    max-width: 410px;
+  }
+
+  .header-text{
+    font-size: var(--font-size-header-M);
+    margin: var(--spacing-ultramedium) 0;
+  }
+
+  .footer__copyright{
+    font-size: var(--font-size-root-M);
+    padding: var(--spacing-ultramedium) 0;
+  }
+}
+
+@media(max-width: 411px){
+  .container{
+    width: 300px;
+    padding: 0 10px;
+  }
 }
