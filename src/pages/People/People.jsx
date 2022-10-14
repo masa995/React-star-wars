@@ -12,16 +12,14 @@ import { getId, getPeopleImage, getPeoplePageId } from "../../untils/PeopleData.
 
 const People = ({ setErrorApi }) => {
 
-  const [people, setPeople] = React.useState(null); //данные о персонажах
+  const [people, setPeople] = React.useState(null);
   const [prevPage, setPrevPage] = React.useState(null);
   const [nextPage, setNextPage] = React.useState(null);
   const [counterPage, setCounterPage] = React.useState(1); //номер текущей страницы
 
   const query = useQueryParams();
-  //Возвращаем query parameters по определенному ключу (page)
   const queryPage = query.get("page");
 
-  //async / await  тоже возвращает Promise и с ним работает 
   const getResponse = React.useCallback(async (url) => {
     const response = await getAPIresponse(url);
 
@@ -71,7 +69,6 @@ const People = ({ setErrorApi }) => {
           )
       }
     </>
-
   )
 }
 

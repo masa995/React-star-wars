@@ -6,7 +6,6 @@ export const changeHTTP = (url) => {
 }
 
 export const makeConcurrentRequest = async (arrURL) => {
-  //Promise.all([]) - ждет выполнения всех промиссов в массиве, и только после этого возвращает общий результат. 
   const response = await Promise.all(arrURL.map((response) => {
     return fetch(response).then((response) => response.json())
   }));
@@ -29,10 +28,4 @@ export const getAPIresponse = async (url) => {
     return false;
   }
 }
-
-// export const getAPIresponse = (url) => {
-//   fetch(url).then((res) => res.json())
-//     .then((body) => console.log(body))
-//     .catch((e) => console.log(e.massage));
-// }
 

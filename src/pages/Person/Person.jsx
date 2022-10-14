@@ -13,8 +13,6 @@ import { getPeopleImage } from "../../untils/PeopleData";
 import style from "./Person.module.css";
 
 const Person = ({ setErrorApi }) => {
-
-  // useParams возвращает объект пар ключ / значение динамических параметров из текущего URL.
   const { id } = useParams();
 
   const [personInfo, setPersonInfo] = React.useState(null);
@@ -26,8 +24,7 @@ const Person = ({ setErrorApi }) => {
   const storeData = useSelector((state) => state.favorite.favoritesArr);
 
   const getResponsePerson = React.useCallback(async () => {
-    storeData.find(elem => elem.id === id) ? setPersonFavorite(true) : setPersonFavorite(false);//сохроняем состояние закладки - если есть в store true, иначе false
-
+    storeData.find(elem => elem.id === id) ? setPersonFavorite(true) : setPersonFavorite(false);
     const responce = await getAPIresponse(`${SWAPI_API_PERSON}${id}/`);
 
     if (responce) {

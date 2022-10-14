@@ -2,9 +2,8 @@ export const getLocalStorage = (key) => {
   const data = localStorage.getItem(key);
 
   if (data !== null) {
-    return JSON.parse(data) //преобразуем в объект
+    return JSON.parse(data)
   }
-
   return []
 }
 

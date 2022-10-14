@@ -42,7 +42,6 @@ const Search = ({ setErrorApi }) => {
     debounce(value => getResponseSearch(value), 250), []);
 
   React.useEffect(() => {
-    //'' - 10 первых элементов
     getResponseSearch('')
   }, [])
 

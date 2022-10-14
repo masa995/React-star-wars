@@ -8,7 +8,6 @@ import notFound from "../../static/img/not-found.jpg"
 import style from "./NotFound.module.css"
 
 const NotFound = () => {
-  // Хук useLocation возвращает объект location, представляющий текущий URL.
   let location = useLocation();
   return (
     <div className="container">

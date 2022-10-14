@@ -9,8 +9,6 @@ export const store = configureStore({
   }
 })
 
-//подписываемся на изменения store
 store.subscribe(() => {
-  // console.log(store.getState().favorite.favoritesArr)
   setLocalStorage("store", store.getState().favorite.favoritesArr)
 })
